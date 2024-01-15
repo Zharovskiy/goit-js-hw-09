@@ -1,12 +1,8 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('./reset.css');
-@import url('./1-gallery.css');
-@import url('./2-form.css');
+@import url('reset.css');
+@import url('1-gallery.css');
+@import url('simple-lightbox.css');
+@import url('simple-lightbox.min.css');
+@import url('2-form.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -14,7 +10,7 @@
   line-height: 24px;
   font-weight: 400;
 
-  color: #242424;
+  color: #2E2F42;
   background-color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
@@ -23,3 +19,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+
