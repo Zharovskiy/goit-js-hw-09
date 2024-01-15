@@ -1582,4 +1582,4 @@ class SimpleLightbox {
 }
 export default SimpleLightbox;
 
-global.SimpleLightbox = SimpleLightbox;
+// global.SimpleLightbox = SimpleLightbox;
