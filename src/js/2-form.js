@@ -6,9 +6,7 @@ let saveData = {};
 if(localStorage.getItem('feedback-form-state')) {
   saveData = JSON.parse(localStorage.getItem('feedback-form-state'));
   for(let key in saveData) {
-    if(saveData[key] !== undefined) {
-      form.elements[key].value = saveData[key];
-    }
+    form.elements[key].value = saveData[key];
   }
 }
 
