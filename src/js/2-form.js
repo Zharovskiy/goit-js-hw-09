@@ -26,7 +26,7 @@ function handleSubmit(event) {
     userCredentials.email = email;
     userCredentials.message = message;
     console.log(userCredentials);
-    localStorage.clear();
+    localStorage.removeItem('feedback-form-state');
     form.reset();
   } 
 };
