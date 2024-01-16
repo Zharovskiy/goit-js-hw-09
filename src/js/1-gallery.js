@@ -1,4 +1,4 @@
-import SimpleLightbox from "./simple-lightbox"
+import SimpleLightbox from "simplelightbox"
 
 const images = [
     {
@@ -79,21 +79,16 @@ const images = [
     img.classList.add('gallery-image');
     img.setAttribute('src', preview);
     img.setAttribute('alt', description);
-    img.setAttribute('title', description);
 
     link.append(img);
     item.append(link);
-    markup.push(item);
+    return item
   };
 
 // Додавання розмітки в галерею
 const gallery = document.querySelector('.gallery');
-const markup = [];
-images.forEach(createElementGallery);
+const markup = images.map(createElementGallery);
 gallery.append(...markup);
 
 // Бібліотека simplelightbox
-const lightbox = new SimpleLightbox('.gallery a', {captionDelay: 250});
-lightbox.on('show.simplelightbox', function () {
-	
-});
+const lightbox = new SimpleLightbox('.gallery a', {captionDelay: 250, captionsData: 'alt'});
